@@ -1,0 +1,550 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ 
+header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(./images/schoolentrance.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;  
+}
+
+
+header .fi-br-arrow-small-up{
+    color: white;
+    font-size: 32px;
+    font-weight: normal;
+    position: fixed;
+    top: 20%;
+    right: 0;
+    z-index: 1;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 80px;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 4%;
+}
+
+nav h1 img{
+    object-fit: cover;
+}
+
+nav a{
+    text-decoration: none;
+}
+nav a h1{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    display: inline-block;
+    padding: 8px 12px;
+    list-style-type: none;
+    position: relative;
+}
+
+ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+/* CHECK THIS STYLE */
+.nav-links ul li::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #00d9e0;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 80%;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    color: #fff;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.text-box h2{
+    font-size: 2.7rem;
+    font-weight: 650; 
+}
+
+.headerparagraph p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+}
+
+.headerparagraph a{
+   display: inline-block;
+   position: relative;
+   background-color: #fff;
+   color: black;
+   border: 1px solid #fff;
+   border-radius: 10px;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   text-decoration: none;
+   padding: 5px 12px;
+   font-size: 14px;
+   font-weight: 700;
+   transition: 0.8s;
+   box-shadow:  rgba(0, 0, 0, 0.6) 5px 5px 5px;
+   cursor: pointer;
+
+}
+
+.headerparagraph a:hover{
+    transform: scale(1.5);
+    font-size: 1rem;
+} 
+
+nav .fa{
+    display: none;
+}
+
+@media (max-width: 700px){
+    .text-box h2{
+        font-size: 20px; 
+    }
+
+    .nav-links ul li{
+        display: block;
+    }
+
+    .nav-links{
+        height: 100vh;
+        width: 200px;
+        position: absolute;
+        top: 0;
+        /* left: 0; */
+        right: -300px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+        background: rgba(0, 0, 0, 0.2);   
+    }
+
+    nav .fa{
+        display: block;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul{
+        padding: 30px 10px;
+    }
+
+    .nav-links ul li::after{
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: #00d9e0;
+        display: block;
+        margin: 0;
+        transition: 0.5s;
+    }
+    
+    .nav-links ul li:hover::after{
+        width: 50%;
+    }
+
+}
+
+#levels{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-color: #f8f9fa;
+}
+
+#levels h2{
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+}
+
+.level, #campuses p, .ourFacilities p{
+    font-size: 18px;
+    line-height: 26px;
+    color: #444;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.levels-col{
+    flex-basis: 32%;
+    flex-grow: 1;
+    background: skyblue;
+    color: #444;
+    border: 1px solid rgb(137, 137, 137);
+    padding: 20px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.levels-col p{
+    padding-bottom: 10px;
+}
+
+@media (max-width: 823px){
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .campus1{
+        margin-bottom: 20px;
+    }
+}
+
+.levels-col h3{
+   text-align: center;
+   font-weight: 700;
+   margin: 10px 0;
+}
+
+.levels-col:hover{
+    box-shadow: 5px 5px 19px 0px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1, 1.1);
+}
+
+@media (max-width: 823px){
+    .levels-col:hover{
+        box-shadow: 0 0 19px 0px rgba(0, 0, 0, .2);
+        transform: none;
+    }  
+}
+
+.campuses{
+    width: 80%;
+    margin: 3rem auto;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.campuses h2, .ourFacilities h2, .levels-col h3{
+    font-size: 32px;
+    margin-bottom: 15px; 
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+@media (max-width: 823px){
+    .campuses h2{
+        text-align: center;
+    } 
+}
+.campuses p{
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.imagesofcampuses{
+    display: flex;
+    flex-basis: 32%;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 823px){
+    .imagesofcampuses{
+        flex-direction: column;
+    }
+}
+
+.imagesofcampuses img{
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.campus1{
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+}
+
+.campuseName{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(4, 9, 30, 0.7);
+    display: ;
+}
+
+.campuseName h3{
+
+}
+
+.ourFacilities{
+    width: 80%;
+    padding-top: 100px;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    padding: 10px;
+    flex-basis: 30%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 20px; 
+}
+
+.facilities{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.facilities h3{
+    padding: 10px 0 0; 
+}
+
+.facilities p{
+    padding: 5px 0 0;
+}
+
+@media (max-width: 823px){
+    .facilities{
+        margin: 30px auto;
+    }
+}
+
+.facilities img{
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    display: inline-block;
+}
+
+.facilities img:hover{
+    opacity: 0.8;
+}
+
+.testimonial{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonial h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #1d3557;
+}
+
+.testimonial p{
+    line-height: 26px;
+    color: #444;
+}
+
+.founder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@media (max-width: 823px){
+    .founder{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+}
+figure img{
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.founder figcaption{
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d3557;
+}
+
+#statements{
+    color: #1d3557;
+    margin: 100px 0 0 0;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.testimonial #test-p{
+    margin: 0;
+    padding: 10px 0;
+}
+
+.testionial-col1, .testionial-col2, .testionial-col3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+.alumni1-pix img{
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.para h3, .enrol h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.enrollment{
+    width: 80%;
+    padding: 100px 10rem; 
+    margin: 3rem auto 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(./images/background2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative;
+}
+
+.enrollment:hover{
+    opacity: 0.8;
+}
+
+.enrol h3{
+    font-size: 32px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#e-form{
+    display: flex;
+}
+
+/* #e-form:focus-within{
+} */
+
+.inputContent{
+    flex-grow: 2;
+    padding: 9px;
+    outline: none;
+    border: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.btn{
+    flex-grow: 1;
+    font-weight: 700;
+    background-color: #1d3557;
+    color: #fff;
+    padding: 12px 10px;
+    border-radius: 0 10px 10px 0;
+    outline: none;
+    border: none;
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+}
+
+footer{
+    text-align: center;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+.social-icons{
+    padding: 10px 0;
+}
+
+.social-icons i{
+    font-size: 32px;
+    margin: 0 5px;
+}
+
+footer p{
+    margin: 20px auto 30px;
+}
